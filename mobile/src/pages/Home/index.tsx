@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <KeyboardAvoidingView 
-      style={{ flex: 1 }}
+      style={{ flex: 1 }} 
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <ImageBackground 
@@ -31,12 +31,12 @@ const Home = () => {
           <Image source={require('../../assets/logo.png')} />
           <View>
             <Text style={styles.title}>Seu marketplace de coleta de resíduos</Text>
-            <Text style={styles.description}>Ajudamos pessoas a econtrarem pontos de coleta de forma eficiente.</Text>
+            <Text style={styles.description}>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</Text>
           </View>
         </View>
-
+        
         <View style={styles.footer}>
-          <TextInput 
+          <TextInput
             style={styles.input}
             placeholder="Digite a UF"
             value={uf}
@@ -46,7 +46,7 @@ const Home = () => {
             onChangeText={setUf}
           />
 
-          <TextInput 
+          <TextInput
             style={styles.input}
             placeholder="Digite a cidade"
             value={city}
@@ -67,7 +67,7 @@ const Home = () => {
         </View>
       </ImageBackground>
     </KeyboardAvoidingView>
-  )
+  );
 };
 
 const styles = StyleSheet.create({
@@ -125,6 +125,8 @@ const styles = StyleSheet.create({
     height: 60,
     width: 60,
     backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    borderTopLeftRadius: 10,
+    borderBottomLeftRadius: 10,
     justifyContent: 'center',
     alignItems: 'center'
   },
